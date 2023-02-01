@@ -1,0 +1,110 @@
+* {
+  font-family: "apparat", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+  background-color: #e8e8e8;
+}
+body {
+  padding-top: 30px;
+  max-width: 80vw;
+  margin: auto;
+}
+header {
+  padding-block: 30px;
+}
+
+main {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+.temp {
+  padding: 2px 16px;
+  cursor: pointer;
+  transition: 0.3s;
+  border-radius: 0.5em;
+  background: #e0e0e0;
+  box-shadow: 15px 15px 30px #bebebe, -15px -15px 30px #ffffff;
+}
+
+.temp h2 {
+  font-family: "apparat-light", sans-serif;
+  font-weight: 100;
+  font-style: normal;
+  background: #e0e0e0;
+  place-content: center;
+}
+
+.temp:hover {
+  cursor: pointer;
+  box-shadow: 15px 15px 30px magenta, -15px -15px 30px #ffffff;
+}
+
+#modal {
+  display: none;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: #000000aa;
+  overflow: scroll;
+}
+#modal h2 {
+  font-family: "apparat", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+  padding-left: 30px;
+}
+#modal p {
+  font-family: "apparat-light", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  padding-left: 30px;
+}
+#modal article {
+  width: 430px;
+  height: 220px;
+  display: flex;
+  flex-direction: column;
+  margin: 4rem auto;
+  border-radius: 25px;
+  padding: 12px;
+  color: black;
+  gap: 20px;
+}
+
+.close {
+  cursor: pointer;
+}
+
+.valgt {
+  background-color: white;
+}
+
+nav button {
+  margin-right: 20px;
+  font-family: "apparat-light", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+button {
+  color: #090909;
+  padding: 0.7em 1.7em;
+  font-size: 20px;
+  border-radius: 0.5em;
+  background: #e8e8e8;
+  border: 1px solid #e8e8e8;
+  transition: all 0.3s;
+  box-shadow: 6px 6px 12px #c5c5c5, -6px -6px 12px #ffffff;
+}
+
+button:active {
+  color: #666;
+  box-shadow: inset 4px 4px 12px #c5c5c5, inset -4px -4px 12px #ffffff;
+}
+
+button:hover {
+  box-shadow: 15px 15px 30px blue, -15px -15px 30px #ffffff;
+}

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <!-- font -->
+    <link rel="stylesheet" href="https://use.typekit.net/riv0qnd.css" />
+    <title>JSON</title>
+  </head>
+
+  <body>
+    <h1>Famous Actors</h1>
+    <header>
+      <nav>
+        <!-- data attribut gør filtrering af indhold muligt -->
+        <button data-movie="all" class="valgt">ALL</button>
+        <button data-movie="Pulp Fiction">PULP FICTION</button>
+        <button data-movie="Fight Club">FIGHT CLUB</button>
+        <button data-movie="Goodfellas">GOODFELLAS</button>
+        <button data-movie="Inception">INCEPTION</button>
+      </nav>
+    </header>
+    <div id="modal" class="close">
+      <article>
+        <div id="close">X</div>
+        <h2 class="modal_fullname"></h2>
+        <p class="modal_movie"></p>
+      </article>
+    </div>
+    <main></main>
+    <template>
+      <article class="temp">
+        <h2 class="fullname"></h2>
+        <p class="movie"></p>
+      </article>
+    </template>
+    <script src="script.js"></script>
+  </body>
+</html>
