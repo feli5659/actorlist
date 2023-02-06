@@ -13,11 +13,12 @@ function start() {
 //eventlistener knyttet til knapperne der vælger hvad for et filter er aktivt
 function filterActors() {
   filter = this.dataset.movie; //sæt variabel "filter" til værdien af data-movie på den knap der er klikket på
-  document.querySelector(".valgt").classList.remove("valgt"); //fjern klassen valgt fra den knap
-  this.classList.add("valgt"); //marker den knap der er klikket på
+  document.querySelector(".valgt").classList.toggle("valgt"); //fjern klassen valgt fra den knap
+  this.classList.toggle("valgt"); //marker den knap der er klikket på
   vis(actors); // kald funktionen vis(actors) efter nye filter er sat
 }
 
+// fetch json
 async function hentdata(fil) {
   const resultat = await fetch(fil);
   actors = await resultat.json();
@@ -39,13 +40,17 @@ function vis(actors) {
   });
 }
 
+// function for popup
 function visDetaljer(actor) {
   console.log(actor);
   modal.querySelector("h2").textContent = actor.fullname;
   modal.querySelector("p").textContent = "Starred in the movie " + actor.movie;
   modal.style.display = "block";
+  document.querySelector("#close").addEventListener("click", lukDetaljer);
 }
 
-document.querySelector(".close").addEventListener("click", () => (modal.style.display = "none"));
+function lukDetaljer() {
+  modal.style.display = "none";
+}
 
 hentdata(fil);

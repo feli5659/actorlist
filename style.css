@@ -74,8 +74,12 @@ main {
   gap: 20px;
 }
 
-.close {
+#close {
   cursor: pointer;
+}
+
+#close:hover {
+  font-size: 1.3rem;
 }
 
 .valgt {
